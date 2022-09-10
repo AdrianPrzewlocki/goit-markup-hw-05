@@ -85,9 +85,24 @@
 							EFEKTYWNE ROZWIĄZANIA <br />
 							DLA WASZEGO BIZNESU
 						</h1>
-						<button class="button main__button" type="button">
+						<button class="button main__button" type="button" data-modal-open>
 							zamów usługę
 						</button>
+						<div class="backdrop">
+							<div class="modal is__hidden" data-modal>
+								<button class="btn__close" data-modal-close>
+									<svg>
+										<use
+											widht="18"
+											height="18"
+											x="9"
+											y="9"
+											href="./images/icons.svg#icon-close-black"
+										></use>
+									</svg>
+								</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -640,5 +655,6 @@
 				</div>
 			</div>
 		</footer>
+		<script src="./js/modal.js"></script>
 	</body>
 </html>
