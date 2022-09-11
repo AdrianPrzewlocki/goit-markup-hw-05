@@ -18,6 +18,7 @@
     --color-text: #757575;
     --color-hover: #2196F3;
     --color-second: #FFF;
+    --color-backdrop: #00000033;
 }
 
 body {
@@ -215,6 +216,24 @@ ul {
     letter-spacing: 0.06em;
 }
 
+.backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--color-backdrop);
+    
+}
+
+.is-hidden {
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(2);
+    transition: 3s;
+}
+
 .modal {
     position: absolute;
     top: 50%;
@@ -224,18 +243,17 @@ ul {
     height: 581px;
     opacity: 1;
     background-color: var(--background-color);
-    box-shadow: 0px 2px 1px 0px #00000033,
+    box-shadow: 0px 2px 1px 0px var(--color-backdrop),
                 0px 1px 1px 0px #00000024,
                 0px 1px 3px 0px #0000001F;
-    z-index: 1;
 }
 
 .btn__close {
     position: absolute;
     width: 30px;
     height: 30px;
-    margin-top: 8px;
-    margin-right: 8px;
+    top: 8px;
+    right: 8px;
     border: 1px solid #0000001A;
     border-radius: 50%;
     padding: 0;
@@ -243,19 +261,13 @@ ul {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    background-color: var(--background-color);
 }
 
-.is__hidden {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-
+.btn__close:hover {
+    background-color: var(--background-hover);
+    fill: var(--color-second)
 }
-
-.backdrop {
-    background: #00000033;
-}
-
 /* main - assets */
 
 .assets {
